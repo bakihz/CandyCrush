@@ -1,0 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.headerTop {
+  min-height: 52px;
+  width: 100%;
+  background-color: grey;
+}
+.headerBottom {
+  height: 30px;
+  background-color: aqua;
+}
+.body {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 2000px;
+  overflow: hidden auto;
+  background-color: aquamarine;
+}
+.footer {
+  height: 50px;
+  min-height: 50px;
+  background: none !important;
+  position: relative;
+  background-color: blue;
+}
