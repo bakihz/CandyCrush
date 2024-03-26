@@ -6,26 +6,31 @@
   width: 100%;
   background-color: black;
 }
-.headerTop {
-  min-height: 52px;
+.header {
+  height: 7vh;
   width: 100%;
   background-color: grey;
-}
-.headerBottom {
-  height: 30px;
-  background-color: aqua;
 }
 .body {
   padding-top: 0px;
   padding-bottom: 0px;
-  height: 2000px;
+  height: 87vh;
   overflow: hidden auto;
   background-color: aquamarine;
 }
 .footer {
-  height: 50px;
-  min-height: 50px;
-  background: none !important;
-  position: relative;
-  background-color: blue;
+  height: 7vh;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  background-color: black;
+  left: 0;
+}
+
+#gameBox {
+  height: 0;
+  width: 40%;
+  padding-bottom: 40%;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
