@@ -27,10 +27,36 @@
   left: 0;
 }
 
-#gameBox {
-  height: 0;
-  width: 40%;
-  padding-bottom: 40%;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+@media only screen and (max-width: 768px) {
+  #gameBox {
+    display: flex;
+    margin-top: 1vw;
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #gameBox {
+    display: flex;
+    margin-top: 1vw;
+    width: 700px;
+    height: 700px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #gameBox {
+    display: flex;
+    margin-top: 1vw;
+    width: 400px;
+    height: 400px;
+  }
+}
+@media only screen and (max-height: 550px) {
+  #gameBox {
+    display: flex;
+    margin-top: 1vw;
+    width: 400px;
+    height: 400px;
+  }
 }
