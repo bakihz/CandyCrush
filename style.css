@@ -27,6 +27,10 @@
   left: 0;
 }
 
+#gameBox {
+  padding: 0;
+}
+
 @media only screen and (max-width: 768px) {
   #gameBox {
     display: flex;
