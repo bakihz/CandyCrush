@@ -44,8 +44,8 @@
   #gameBox {
     display: flex;
     margin-top: 1vw;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
   }
 }
 @media only screen and (max-width: 550px) {
