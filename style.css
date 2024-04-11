@@ -14,12 +14,12 @@
 .body {
   padding-top: 0px;
   padding-bottom: 0px;
-  height: 87vh;
+  height: 89vh;
   overflow: hidden auto;
   background-color: aquamarine;
 }
 .footer {
-  height: 7vh;
+  height: 5vh;
   width: 100%;
   bottom: 0;
   position: fixed;
@@ -29,6 +29,31 @@
 
 #gameBox {
   padding: 0;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+tr {
+  /* display: flex; */
+  margin: 0;
+}
+
+td {
+  width: 74.4px;
+  height: 12.5%;
+  top: 0px;
+  left: 0px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td div {
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  display: flex;
 }
 
 @media only screen and (max-width: 768px) {
