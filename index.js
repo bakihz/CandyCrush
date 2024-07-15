@@ -6,6 +6,7 @@ function addElement() {
 
   const parentDiv = document.getElementById("gameBox");
 
+  // creating cells
   for (let i = 1; i < 9; i++) {
     const tableRow = document.createElement("tr");
     tableRow.id = "row" + i;
@@ -17,42 +18,35 @@ function addElement() {
       innerCell.id = "icell" + j + i;
       tableRow.appendChild(tableCell);
       tableCell.appendChild(innerCell);
-      innerCell.innerHTML = "hi" + j + i;
-      // tableCell.style.cssText = `
-      //  width:87px;
-      //  height: 12.5vh;
-      //  top:0px;
-      //  left:0px;
-      //  background-color:gray;
-      //  display:flex;
-      //  justify-content:center;
-      //  align-items:center;
-      // `;
-      // innerCell.style.cssText = `
-      //  width:90%;
-      //  height:90%;
-      //  background-color:white;
-      //  display:flex;
-      // `;
+      innerCell.innerHTML = "hi " + j + i;
+      tableCell.addEventListener("click", function () {
+        candys.push(tableCell);
+        if (candys.length == 2) {
+          moveElements();
+        }
+        console.log(candys);
+      });
+      console.log(tableCell);
     }
   }
 
   var candys = [];
+
+  // moving elements
   function moveElements() {
     function c() {
-      console.log(
-        "hi",
-        document
-
-          .getElementById("gameBox")
-          .childNodes[0].insertBefore(
-            document.getElementById("gameBox").childNodes[0].childNodes[1],
-            document.getElementById("gameBox").childNodes[0].childNodes[0]
-              .insertBefore
-          )
+      document.getElementById("gameBox").childNodes[0].insertBefore(
+        candys[0],
+        candys[1]
+        // document.getElementById("gameBox").childNodes[1].childNodes[0],
+        // document.getElementById("gameBox").childNodes[0].childNodes[0]
       );
     }
     setInterval(c(), 5);
+    // document.getElementById("gameBox")();
+    // .childNodes[1].insertBefore
+    // document.getElementById("gameBox").childNodes[0].childNodes[1],
+    // document.getElementById("gameBox").childNodes[1].childNodes[0]
 
     candys = [];
   }
