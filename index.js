@@ -7,26 +7,32 @@ function addElement() {
   const parentDiv = document.getElementById("gameBox");
 
   // creating cells
-  for (let i = 1; i < 9; i++) {
-    const tableRow = document.createElement("tr");
-    tableRow.id = "row" + i;
-    parentDiv.appendChild(tableRow);
-    for (let j = 1; j < 9; j++) {
-      const tableCell = document.createElement("td");
-      tableCell.id = "cell" + j + i;
-      const innerCell = document.createElement("div");
-      innerCell.id = "icell" + j + i;
-      tableRow.appendChild(tableCell);
-      tableCell.appendChild(innerCell);
-      innerCell.innerHTML = "hi " + j + i;
-      tableCell.addEventListener("click", function () {
-        candys.push(tableCell);
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
+      const box = document.createElement("div");
+      box.id = "row" + i + j;
+      box.style.position = "absolute";
+      box.style.display = "flex";
+      let y = i * 75;
+      y = String(y) + "px";
+      let x = j * 75;
+      x = String(x) + "px";
+      box.style.marginTop = y;
+      box.style.marginLeft = x;
+      box.style.width = "75px";
+      box.style.height = "75px";
+      box.style.textAlign = "center";
+      box.style.backgroundColor = "grey";
+      parentDiv.appendChild(box);
+      box.innerHTML = box.id;
+      box.addEventListener("click", function () {
+        candys.push(box);
         if (candys.length == 2) {
           moveElements();
         }
         console.log(candys);
       });
-      console.log(tableCell);
+      console.log(box);
     }
   }
 
@@ -41,6 +47,7 @@ function addElement() {
         // document.getElementById("gameBox").childNodes[1].childNodes[0],
         // document.getElementById("gameBox").childNodes[0].childNodes[0]
       );
+      candys = [];
     }
     setInterval(c(), 5);
     // document.getElementById("gameBox")();
